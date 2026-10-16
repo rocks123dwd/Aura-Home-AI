@@ -1,6 +1,6 @@
 # Aura Home
 
-Aura is a house AI made by Meme. You talk to it like you'd talk to a person, and it answers questions and runs the devices around your home, starting with the lights.
+Aura is a house AI made by Rocks. You talk to it like you'd talk to a person, and it answers questions and runs the devices around your home, starting with the lights.
 
 It doesn't sit on top of Home Assistant. Aura has its own device-control code, so it talks to your gear directly and nothing else needs to be installed for it to work.
 
@@ -24,6 +24,4 @@ Aura controls real devices in a real house, so keep it on your home network and 
 
 ## Credits
 
-Made by Meme.
-
-Aura is being rebranded as Astra Home.
+Made by Rocks
