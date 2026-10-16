@@ -1,76 +1,29 @@
-# Aura Home AI
+# Aura Home
 
-A house AI you connect to your home. Ask it questions, tell it what to do, and it controls your smart devices (lights and the like) through its own device-control layer. No Home Assistant dependency.
+Aura is a house AI made by Meme. You talk to it like you'd talk to a person, and it answers questions and runs the devices around your home, starting with the lights.
 
-> **Status:** early development. Core chat and device control work; memory does not exist yet.
+It doesn't sit on top of Home Assistant. Aura has its own device-control code, so it talks to your gear directly and nothing else needs to be installed for it to work.
 
-## Features
+## What it does
 
-- **Conversational assistant**: ask questions in plain English, powered by the [Groq API](https://groq.com/).
-- **Smart device control**: switch lights and other devices on and off by asking.
-- **Custom control code**: talks to devices directly rather than building on top of Home Assistant.
-- **Shared storage**: designed to keep data on a household NAS.
+- Answers questions in plain English, using the Groq API
+- Turns lights and other smart devices on and off when you ask
+- Keeps its data on the home NAS, so it stays in the house
 
-## Not yet implemented
+## What it doesn't do yet
 
-- Persistent memory (it forgets everything between conversations)
+Aura has no memory. Every conversation starts from scratch, so it won't remember what you told it yesterday. That's the next thing on the list.
 
-## Requirements
+## Running it
 
-- Python or Node runtime (fill in whichever the project uses)
-- A Groq API key
-- Smart devices reachable on your local network
-- (Optional) A NAS or shared drive for data storage
+Aura needs a Groq API key to think, and your devices need to be on the same network as the machine running it. Put the key in a `.env` file as `GROQ_API_KEY` and start it up.
 
-## Setup
+## A word of caution
 
-```bash
-git clone <your-repo-url> aura
-cd aura
-```
+Aura controls real devices in a real house, so keep it on your home network and don't expose it to the internet.
 
-Create a `.env` file in the project root:
+## Credits
 
-```env
-GROQ_API_KEY=your_key_here
-```
+Made by Meme.
 
-Install dependencies and run:
-
-```bash
-# Replace with the actual commands for your stack
-<install command>
-<run command>
-```
-
-## Usage
-
-Once running, talk to it:
-
-```
-> turn off the living room lights
-> what's the capital of Australia?
-```
-
-## Configuration
-
-| Setting | Description |
-| --- | --- |
-| `GROQ_API_KEY` | API key used for AI responses |
-
-Device definitions (names, rooms, protocols) live in the project's device config. Add your devices there so Aura can find them.
-
-## Roadmap
-
-- [ ] Conversation memory
-- [ ] More device types
-- [ ] NAS-backed data storage
-- [ ] Rebrand to **Astra Home**
-
-## Security
-
-Never commit your `.env` file or API keys. Aura can control physical devices, so keep it on a trusted network and don't expose it to the internet without authentication.
-
-## Built with
-
-Groq API and [Claude Code](https://claude.com/claude-code).
+Aura is being rebranded as Astra Home.
